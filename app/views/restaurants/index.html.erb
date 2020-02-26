@@ -1,0 +1,14 @@
+<h1>All our restaurants</h1>
+
+<p><%= link_to 'New restaurant', new_restaurant_path, class: 'btn btn-primary' %></p>
+
+<ul>
+  <% @restaurants.each do |restaurant| %>
+    <li>
+      <%= link_to restaurant.name, restaurant_path(restaurant) %>
+      <%= link_to 'edit', edit_restaurant_path(restaurant) %>
+      -
+      <%= link_to 'delete', restaurant_path(restaurant), method: 'delete', data: { confirm: 'Are you sure? Really?' } %>
+    </li>
+  <% end %>
+</ul>

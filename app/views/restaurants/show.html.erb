@@ -1,0 +1,12 @@
+
+<h1>Restaurant <%= @restaurant.name %></h1>
+
+<p><%= @restaurant.adress %></p>
+<p><%= @restaurant.phone_number %></p>
+<p><%= @restaurant.category %></p>
+
+<%= link_to "Back to all restaurants", restaurants_path %>
+
+<h3>Add a review:</h3>
+
+<%= render "reviews/form" %>
